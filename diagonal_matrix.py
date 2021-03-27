@@ -29,5 +29,5 @@ class diagonal_matrix(matrices):
             self.mtx = self.mtx.replace("\n", "")
         ofst.write("Size = " + str(self.size) + "\n")
         ofst.write("Output Type = " + self.OutputType[int(self.key)]+ "\n")
-        ofst.write("Sum of elements = "+ str(self.sumelems) + "\n")
+        ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
         ofst.write(self.mtx + "\n")

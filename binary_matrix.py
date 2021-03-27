@@ -10,6 +10,7 @@ class bin_matrix(matrices):
     def In(self, line):
         mtx1 = line.split(" ")
         countlines = int(len(mtx1) ** 0.5)
+        self.key = mtx1.pop(0)
         self.size = countlines
 
         for i in range(0, len(mtx1), countlines):
