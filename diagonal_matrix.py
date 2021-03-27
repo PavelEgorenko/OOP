@@ -16,7 +16,7 @@ class diagonal_matrix(matrices):
                 if i == mtx1[k]:
                     mtx2 += (i + " ")
                 else:
-                    mtx2 += ("0" + " ")
+                    mtx2 += ("0 ")
             self.mtx += mtx2 + "\n"
         self.mtx = self.mtx[:-2]
 
