@@ -19,8 +19,10 @@ class diagonal_matrix(matrices):
                     mtx2 += ("0" + " ")
             self.mtx += mtx2 + "\n"
         self.mtx = self.mtx[:-2]
+        self.sum_of_elements()
 
     def Out(self, ofst):
         ofst.write("Diagonal two-dimensional array:\n")
         ofst.write("Size = " + str(self.size) + "\n")
+        ofst.write("Sum of elements = "+ str(self.sumelems) + "\n")
         ofst.write(self.mtx + "\n")

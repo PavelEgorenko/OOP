@@ -17,8 +17,10 @@ class bin_matrix(matrices):
                 mtx2 += (mtx1[i + k]) + " "
             self.mtx += mtx2 + "\n"
         self.mtx = self.mtx[:-2]
+        self.sum_of_elements()
 
     def Out(self, ofst):
         ofst.write("Common two-dimensional array:\n")
         ofst.write("Size = " + str(self.size)+"\n")
+        ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
         ofst.write(self.mtx+"\n")
