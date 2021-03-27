@@ -22,6 +22,9 @@ class bin_matrix(matrices):
 
     def Out(self, ofst):
         ofst.write("Common two-dimensional array:\n")
+        if self.key == "2":
+            self.mtx = self.mtx.replace("\n", "")
         ofst.write("Size = " + str(self.size)+"\n")
         ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
+        ofst.write("Output Type = " + self.OutputType[int(self.key)]+ "\n")
         ofst.write(self.mtx+"\n")
