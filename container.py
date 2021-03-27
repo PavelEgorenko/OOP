@@ -13,12 +13,17 @@ class container:
             self.matrices.append(nm)
 
     def OutData(self, ofst):
-        ofst.write("Container contains "+str(len(self.matrices))+" elements.\n")
+        ofst.write("Container contains " + str(len(self.matrices)) + " elements.\n")
         for i in range(len(self.matrices)):
-            ofst.write(str(i+1)+": ")
+            ofst.write(str(i + 1) + ": ")
             self.matrices[i].Out(ofst)
+
+    def OutDataFirstType(self, ofst1):
+        ofst1.write("Container contains " + str(len(self.matrices)) + " elements.\n")
+        for i in range(len(self.matrices)):
+            if self.matrices[i].type == "Binary":
+                ofst1.write(str(i + 1) + ": ")
+                self.matrices[i].Out(ofst1)
 
     def Clear(self):
         self.matrices = []
-
-

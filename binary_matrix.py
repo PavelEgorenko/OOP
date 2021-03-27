@@ -4,6 +4,7 @@ from matrices import matrices
 class bin_matrix(matrices):
     def __init__(self):
         super().__init__()
+        self.type = "Binary"
         self.mtx = ""
 
     def In(self, line):
