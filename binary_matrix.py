@@ -8,6 +8,7 @@ class bin_matrix(matrices):
 
     def In(self, line):
         mtx1 = line.split(" ")
+        self.key = mtx1.pop(0)
         countlines = int(len(mtx1) ** 0.5)
         self.size = countlines
 
@@ -20,5 +21,8 @@ class bin_matrix(matrices):
 
     def Out(self, ofst):
         ofst.write("Common two-dimensional array:\n")
+        if self.key == "2":
+            self.mtx = self.mtx.replace("\n", "")
         ofst.write("Size = " + str(self.size)+"\n")
+        ofst.write("Output Type = " + self.OutputType[int(self.key)]+ "\n")
         ofst.write(self.mtx+"\n")
