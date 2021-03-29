@@ -4,6 +4,7 @@ from matrices import matrices
 class triangle_matrix(matrices):
     def __init__(self):
         super().__init__()
+        self.type = "Diagonal"
         self.mtx = ""
 
     def In(self, line):
@@ -30,6 +31,8 @@ class triangle_matrix(matrices):
 
     def Out(self, ofst):
         ofst.write("Triangle two-dimensional array:\n")
+        if self.key == "2":
+            self.mtx = self.mtx.replace("\n", "")
         ofst.write("Size = " + str(self.size) + "\n")
         ofst.write("Output Type = " + self.OutputType[int(self.key)]+ "\n")
         ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
