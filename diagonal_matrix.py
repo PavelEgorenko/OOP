@@ -18,16 +18,16 @@ class diagonal_matrix(matrices):
                 if i == mtx1[k]:
                     mtx2 += (i + " ")
                 else:
-                    mtx2 += ("0 ")
+                    mtx2 += "0 "
             self.mtx += mtx2 + "\n"
         self.mtx = self.mtx[:-2]
+        if self.key == "2":
+            self.mtx = self.mtx.replace("\n", "")
         self.sum_of_elements()
 
     def Out(self, ofst):
         ofst.write("Diagonal two-dimensional array:\n")
-        if self.key == "2":
-            self.mtx = self.mtx.replace("\n", "")
         ofst.write("Size = " + str(self.size) + "\n")
-        ofst.write("Output Type = " + self.OutputType[int(self.key)]+ "\n")
+        ofst.write("Output Type = " + self.OutputType[int(self.key)] + "\n")
         ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
         ofst.write(self.mtx + "\n")

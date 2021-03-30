@@ -1,0 +1,6 @@
+Container contains 2 elements.
+1: Common two-dimensional array:
+Size = 0
+Sum of elements = 0
+Output Type = None
+1

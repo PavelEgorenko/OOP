@@ -1,0 +1,5 @@
+Triangle two-dimensional array:
+Size = 1
+Output Type = line by line
+Sum of elements = 3
+3

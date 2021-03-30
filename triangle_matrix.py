@@ -27,13 +27,13 @@ class triangle_matrix(matrices):
                     self.mtx += "0 "
             self.mtx += "\n"
         self.mtx = self.mtx[:-2]
+        if self.key == "2":
+            self.mtx = self.mtx.replace("\n", "")
         self.sum_of_elements()
 
     def Out(self, ofst):
         ofst.write("Triangle two-dimensional array:\n")
-        if self.key == "2":
-            self.mtx = self.mtx.replace("\n", "")
         ofst.write("Size = " + str(self.size) + "\n")
-        ofst.write("Output Type = " + self.OutputType[int(self.key)]+ "\n")
+        ofst.write("Output Type = " + self.OutputType[int(self.key)] + "\n")
         ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
         ofst.write(self.mtx + "\n")

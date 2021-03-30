@@ -1,0 +1,5 @@
+Common two-dimensional array:
+Size = 1
+Sum of elements = 3
+Output Type = line by line
+3
