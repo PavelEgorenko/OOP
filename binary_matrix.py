@@ -29,3 +29,6 @@ class bin_matrix(matrices):
         ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
         ofst.write("Output Type = " + self.OutputType[int(self.key)] + "\n")
         ofst.write(self.mtx+"\n")
+
+    def OutDataFiltr(self, ofst1):
+        return None

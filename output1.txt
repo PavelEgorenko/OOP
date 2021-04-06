@@ -1,18 +1,13 @@
-Container contains 8 elements.
-1: Common two-dimensional array:
-Size = 2
-Sum of elements = 12
-Output Type = line by line
-1 3 
-5 3
+Container contains 7 elements.
 2: Common two-dimensional array:
 Size = 2
-Sum of elements = 87
-Output Type = one dimensional array
-76 3 1 7
+1 3 
+5 3
 3: Common two-dimensional array:
 Size = 2
-Sum of elements = 100
-Output Type = line by line
+76 3 
+1 7
+7: Common two-dimensional array:
+Size = 2
 10 20 
 30 40

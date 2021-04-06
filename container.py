@@ -15,16 +15,13 @@ class container:
     def OutData(self, ofst):
         ofst.write("Container contains " + str(len(self.matrices)) + " elements.\n\n")
         for i in range(len(self.matrices)):
-            ofst.write(str(i + 1) + ": ")
             self.matrices[i].Out(ofst)
             ofst.write("\n")
 
     def OutDataFirstType(self, ofst1):
         ofst1.write("Container contains " + str(len(self.matrices)) + " elements.\n")
         for i in range(len(self.matrices)):
-            if self.matrices[i].type == "Binary":
-                ofst1.write(str(i + 1) + ": ")
-                self.matrices[i].Out(ofst1)
+            self.matrices[i].OutDataFiltr(ofst1)
 
     def Sort(self):
         for i in range(len(self.matrices)-1):

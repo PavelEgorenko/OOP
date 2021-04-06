@@ -1,6 +1,10 @@
 from matrices import matrices
 
 
+def OutDataFiltr():
+    return None
+
+
 class diagonal_matrix(matrices):
     def __init__(self):
         super().__init__()
@@ -31,3 +35,8 @@ class diagonal_matrix(matrices):
         ofst.write("Output Type = " + self.OutputType[int(self.key)] + "\n")
         ofst.write("Sum of elements = " + str(self.sumelems) + "\n")
         ofst.write(self.mtx + "\n")
+
+    def OutDataFiltr(self, ofst1):
+        ofst1.write("Diagonal two-dimensional array:\n")
+        ofst1.write("Size = " + str(self.size) + "\n")
+        ofst1.write(self.mtx + "\n\n")
