@@ -134,22 +134,22 @@ class Test_container(TestCase):
         c = container()
         ctest = container()
         nm1 = bin_matrix()
-        nm1.size = 5
+        nm1.key = 1
         nm2 = triangle_matrix()
-        nm2.size = 3
-        nm3 = bin_matrix()
-        nm3.size = 4
-        nm4 = triangle_matrix()
-        nm4.size = 3
+        nm2.key = 2
+        nm3 = triangle_matrix()
+        nm3.key = 1
+        nm4 = bin_matrix()
+        nm4.key = 1
         c.matrices.append(nm1)
         c.matrices.append(nm2)
         c.matrices.append(nm3)
         c.matrices.append(nm4)
         c.Sort()
-        ctest.matrices.append(nm2)
-        ctest.matrices.append(nm4)
-        ctest.matrices.append(nm3)
         ctest.matrices.append(nm1)
+        ctest.matrices.append(nm3)
+        ctest.matrices.append(nm4)
+        ctest.matrices.append(nm2)
         self.assertEqual(c.matrices, ctest.matrices)
 
     def test_Clear(self):
