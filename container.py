@@ -21,7 +21,7 @@ class container:
     def Sort(self):
         for i in range(len(self.matrices)-1):
             for k in range(len(self.matrices)-1):
-                if self.matrices[k].size > self.matrices[k+1].size:
+                if self.matrices[k].key > self.matrices[k+1].key:
                     self.matrices[k], self.matrices[k+1] = self.matrices[k+1], self.matrices[k]
 
     def Clear(self):
