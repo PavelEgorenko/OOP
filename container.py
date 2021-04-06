@@ -18,6 +18,12 @@ class container:
             ofst.write(str(i+1)+": ")
             self.matrices[i].Out(ofst)
 
+    def Sort(self):
+        for i in range(len(self.matrices)-1):
+            for k in range(len(self.matrices)-1):
+                if self.matrices[k].size > self.matrices[k+1].size:
+                    self.matrices[k], self.matrices[k+1] = self.matrices[k+1], self.matrices[k]
+
     def Clear(self):
         self.matrices = []
 

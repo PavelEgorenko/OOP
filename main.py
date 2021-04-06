@@ -7,6 +7,7 @@ print("Start.")
 c = container()
 c.InData(ifst)
 ofst.write("Filled container.\n")
+c.Sort()
 c.OutData(ofst)
 for i in range(len(c.matrices)):
     print(c.matrices[i])
