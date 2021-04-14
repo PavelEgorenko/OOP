@@ -1,4 +1,6 @@
 from matrices import matrices
+from multimethod import multimethod
+from binary_matrix import bin_matrix
 
 
 class diagonal_matrix(matrices):
@@ -24,3 +26,9 @@ class diagonal_matrix(matrices):
         ofst.write("Diagonal two-dimensional array:\n")
         ofst.write("Size = " + str(self.size) + "\n")
         ofst.write(self.mtx + "\n")
+
+
+
+    @multimethod
+    def multimethod(self, obj, ofst):
+        ofst.write("Diagonal and diagonal matrix:\n")
