@@ -15,12 +15,12 @@ class diagonal_matrix(matrices):
         mtx1 = line.split(" ")
         for i in mtx1:
             if not i.isdigit():
-                print("В матрице содержаться не только числа")
+                print("В матрице содержаться не только числа", end=", ")
                 self.isError = True
                 return
         self.key = mtx1.pop(0)
         if self.key != "1" and self.key != "2":
-            print("Неверно введен тип вывода данных в диагональной матрице")
+            print("Неверно введен тип вывода данных в диагональной матрице", end=", ")
             self.isError = True
             return
         self.size = len(mtx1)

@@ -11,7 +11,7 @@ class container:
         for line in file:
             nm = InData(line)
             if nm.isError:
-                print("Ошибка в", len(self.matrices) + 1, "строке")
+                print("ошибка в", len(self.matrices) + 1, "строке")
                 exit()
             self.matrices.append(nm)
 

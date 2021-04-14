@@ -12,17 +12,17 @@ class bin_matrix(matrices):
         countlines = int(len(mtx1) ** 0.5)
         self.key = mtx1.pop(0)
         if self.key != "1" and self.key != "2":
-            print("Неверно введен тип вывода данных в обычной матрице матрице")
+            print("Неверно введен тип вывода данных в обычной матрице матрице", end=", ")
             self.isError = True
             return
         self.size = countlines
         for i in mtx1:
             if not i.isdigit():
-                print("В матрице содержаться не только числа")
+                print("В матрице содержаться не только числа", end=", ")
                 self.isError = True
                 return
         if len(mtx1) ** 0.5 != self.size:
-            print("Неверно введено количество элементов в матрице")
+            print("Неверно введено количество элементов в матрице", end=", ")
             self.isError = True
             return
 

@@ -11,12 +11,12 @@ class triangle_matrix(matrices):
         mtx1 = line.split(" ")
         for i in mtx1:
             if not i.isdigit():
-                print("В матрице содержаться не только числа")
+                print("В матрице содержаться не только числа", end=", ")
                 self.isError = True
                 return
         self.key = mtx1.pop(0)
         if self.key != "1" and self.key != "2":
-            print("Неверно введен тип вывода данных в треугольной матрице")
+            print("Неверно введен тип вывода данных в треугольной матрице", end=", ")
             self.isError = True
             return
         itr = 0
@@ -27,7 +27,7 @@ class triangle_matrix(matrices):
             for i in range(itr):
                 length += i + 1
             if length > len(mtx1):
-                print("Неверно введено количество элементов в треугольной матрице")
+                print("Неверно введено количество элементов в треугольной матрице", end=", ")
                 self.isError = True
                 return
         self.size = itr
