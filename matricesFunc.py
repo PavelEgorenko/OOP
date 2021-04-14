@@ -15,5 +15,9 @@ def InData(line):
     elif line[0] == '3':
         line = line[2:]
         nm = triangle_matrix()
+    else:
+        print("Некорректный ввод типа матрицы")
+        nm.isError = False
+        return nm
     nm.In(line)
     return nm

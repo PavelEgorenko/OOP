@@ -7,6 +7,7 @@ class matrices:
         self.size = 0
         self.mtx = ""
         self.sumelems = 0
+        self.isError = False
 
     def sum_of_elements(self):
         lst = self.mtx.replace("\n", "").split(" ")

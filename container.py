@@ -10,6 +10,9 @@ class container:
     def InData(self, file):
         for line in file:
             nm = InData(line)
+            if nm.isError:
+                print("Ошибка в", len(self.matrices) + 1, "строке")
+                exit()
             self.matrices.append(nm)
 
     def OutData(self, ofst):
