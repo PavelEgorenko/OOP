@@ -14,7 +14,7 @@ class container:
             nm = InData(line)
             self.matrices.append(nm)
 
-    def OutData(self, ofst):
+    def OutData(self:bin_matrix, ofst):
         ofst.write("Container contains " + str(len(self.matrices)) + " elements.\n")
         for i in range(len(self.matrices)):
             ofst.write(str(i + 1) + ": ")
@@ -30,7 +30,9 @@ class container:
         self.matrices = []
 
     def Multimethod(self, ofst):
-        ofst.write("Multimethod")
-        for i in range(0, len(self.matrices), 2):
-            j = i + 1
-            self.matrices[i].multimethod(self.matrices[j], ofst)
+        ofst.write("Multimethod\n")
+        for i in range(len(self.matrices)-1):
+            for j in range(i, len(self.matrices)):
+                mmm(self.matrices[i], self.matrices[j], ofst)
+                self.matrices[i].Out(ofst)
+                self.matrices[j].Out(ofst)

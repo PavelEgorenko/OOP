@@ -2,11 +2,12 @@ from container import container
 
 ifst = open("input.txt").read().split("\n")
 ofst = open("output.txt", "w")
-
+ofst2 = open("output2.txt", "w")
 print("Start.")
 c = container()
 c.InData(ifst)
 ofst.write("Filled container.\n")
+c.Multimethod(ofst2)
 c.Sort()
 c.OutData(ofst)
 for i in range(len(c.matrices)):
@@ -16,3 +17,4 @@ ofst.write("Empty container.\n")
 c.OutData(ofst)
 print("Stop")
 ofst.close()
+ofst2.close()

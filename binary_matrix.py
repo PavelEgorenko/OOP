@@ -20,5 +20,5 @@ class bin_matrix(matrices):
 
     def Out(self, ofst):
         ofst.write("Common two-dimensional array:\n")
-        ofst.write("Size = " + str(self.size)+"\n")
-        ofst.write(self.mtx+"\n")
+        ofst.write("Size = " + str(self.size) + "\n")
+        ofst.write(self.mtx + "\n")

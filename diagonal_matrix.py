@@ -26,9 +26,3 @@ class diagonal_matrix(matrices):
         ofst.write("Diagonal two-dimensional array:\n")
         ofst.write("Size = " + str(self.size) + "\n")
         ofst.write(self.mtx + "\n")
-
-
-
-    @multimethod
-    def multimethod(self, obj, ofst):
-        ofst.write("Diagonal and diagonal matrix:\n")
